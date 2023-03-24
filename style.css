@@ -8,8 +8,16 @@ body{
     overflow: hidden;
     position: fixed;
     background-color: rgba(250, 235, 215, 0.389);
-    text-align: center;
-    vertical-align: middle;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-link {
+    margin: 0 5%;
 }
 
 #footer {
@@ -17,7 +25,7 @@ body{
     height: 5vh;
 }
 
-#navbar a, #footer a {
+#footer a {
     margin: 0 5%;
 }
 
