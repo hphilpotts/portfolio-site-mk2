@@ -8,11 +8,17 @@ body{
     overflow: hidden;
     position: fixed;
     background-color: rgba(250, 235, 215, 0.389);
-    text-align: right;
+    text-align: center;
+    vertical-align: middle;
 }
 
 #footer {
     bottom: 0;
+    height: 5vh;
+}
+
+#navbar a, #footer a {
+    margin: 0 5%;
 }
 
 #main-container {
@@ -24,7 +30,15 @@ body{
 .full-page-screen {
     height: 100vh;
     width: 100vw;
+
     scroll-snap-align: start;
+
+    display: flex;
+}
+
+.content-container {
+    width: auto;
+    margin: 20% 5%;
 }
 
 #intro-screen {
