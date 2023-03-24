@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+}
+
+#navbar, #footer {
+    height: 10vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    background-color: rgba(250, 235, 215, 0.389);
+    text-align: right;
+}
+
+#footer {
+    bottom: 0;
+}
+
+#main-container {
+    overflow: scroll;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+
+.full-page-screen {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+#intro-screen {
+    background-color: aqua;
+}
+
+#projects-screen {
+    background-color: blueviolet;
+}
+
+#about-screen {
+    background-color: chartreuse;
+
+}
