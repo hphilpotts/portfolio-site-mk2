@@ -7,6 +7,12 @@ body {
     font-family: 'Comfortaa', cursive;
 }
 
+a {
+    font-size: smaller;
+    color: white;
+    text-decoration: none;
+}
+
 #navbar,
 #footer {
     height: 10vh;
@@ -58,9 +64,30 @@ body {
     margin: 20% 5%;
 }
 
+#projects-container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
 .slider-icons {
     height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
 }
+
+.icon {
+    height: auto;
+    width: 12.5%;
+    flex-grow: 1;
+    background-color: black;
+}
+
+.icon-img {
+    color: black;
+    background: radial-gradient(white 0, white 50%, black 100%);
+    margin: 5%;
+}  
 
 .slider {
     height: 80%;
@@ -73,7 +100,9 @@ body {
 .slide {
     flex-shrink: 0;
     width: 100%;
+    margin: 0 25%;
     height: auto;
     -webkit-overflow-scrolling: touch;
     scroll-snap-align: start;
+    scroll-behavior: smooth;
 }

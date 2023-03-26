@@ -14,8 +14,16 @@
     background-color: navy;
 } */
 
-.slider-icons {
+.slider {
+    background-color: black;
+} 
+
+/* .slider-icons {
     background-color: lime;
+} */
+
+#slide-0 {
+    background-color: darkgrey;
 }
 
 #slide-1, #slide-3, #slide-5 {
