@@ -78,12 +78,14 @@ a {
 
 .icon {
     height: auto;
+    max-height: 50%;
     width: 12.5%;
     flex-grow: 1;
     background-color: black;
 }
 
 .icon-img {
+    max-height: 100%;
     color: black;
     background: radial-gradient(white 0, white 50%, black 100%);
     margin: 5%;
@@ -105,4 +107,10 @@ a {
     -webkit-overflow-scrolling: touch;
     scroll-snap-align: start;
     scroll-behavior: smooth;
+}
+
+@media (min-width: 800px) {
+    .content-container {
+        margin: 5% 20%;
+    }
 }
