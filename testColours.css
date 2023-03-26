@@ -1,16 +1,27 @@
-.content-container {
-    background-color: lightcoral;
+/* .content-container {
+    background-color: blue;
 }
 
 #intro-screen {
-    background-color: aqua;
+    background-color: navy;
 }
 
 #projects-screen {
-    background-color: blueviolet;
+    background-color: midnightblue;
 }
 
 #about-screen {
-    background-color: chartreuse;
+    background-color: navy;
+} */
 
+.slider-icons {
+    background-color: lime;
+}
+
+#slide-1, #slide-3, #slide-5 {
+    background-color: red;
+}
+
+#slide-2, #slide-4, #slide-6 {
+    background-color: darkred;
 }
