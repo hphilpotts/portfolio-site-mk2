@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    background-color: black;
+    color: white;
 }
 
 #navbar, #footer {
@@ -7,7 +9,6 @@ body{
     width: 100%;
     overflow: hidden;
     position: fixed;
-    background-color: rgba(250, 235, 215, 0.389);
 }
 
 #navbar {
@@ -23,6 +24,7 @@ body{
 #footer {
     bottom: 0;
     height: 5vh;
+    text-align: center;
 }
 
 #footer a {
@@ -42,11 +44,21 @@ body{
     scroll-snap-align: start;
 
     display: flex;
+    flex-flow: column;
 }
 
 .content-container {
+    flex: 1;
+    overflow: auto;
     width: auto;
     margin: 20% 5%;
+    background-color: lightcoral;
+}
+
+@media all and (min-width: 800px) {
+    .content-container {
+        max-width: 600px;
+    }
 }
 
 #intro-screen {
