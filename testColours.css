@@ -1,0 +1,16 @@
+.content-container {
+    background-color: lightcoral;
+}
+
+#intro-screen {
+    background-color: aqua;
+}
+
+#projects-screen {
+    background-color: blueviolet;
+}
+
+#about-screen {
+    background-color: chartreuse;
+
+}

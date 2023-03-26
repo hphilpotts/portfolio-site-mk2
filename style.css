@@ -1,7 +1,10 @@
 body{
     margin: 0;
+
     background-color: black;
     color: white;
+
+    font-family: 'Comfortaa', cursive;
 }
 
 #navbar, #footer {
@@ -52,24 +55,4 @@ body{
     overflow: auto;
     width: auto;
     margin: 20% 5%;
-    background-color: lightcoral;
-}
-
-@media all and (min-width: 800px) {
-    .content-container {
-        max-width: 600px;
-    }
-}
-
-#intro-screen {
-    background-color: aqua;
-}
-
-#projects-screen {
-    background-color: blueviolet;
-}
-
-#about-screen {
-    background-color: chartreuse;
-
 }
