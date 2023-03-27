@@ -94,13 +94,15 @@ a {
     width: 12.5%;
     flex-grow: 1;
     background-color: black;
+    border-radius: 0.5em;
 }
 
 .icon-img {
     max-height: 100%;
     color: black;
-    background: radial-gradient(white 0, white 50%, black 100%);
-    margin: 5%;
+    background: transparent;
+    border-radius: 0.5em;
+    background: radial-gradient(white, black 100%);
 }  
 
 .slider {
@@ -175,4 +177,8 @@ a {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
 }
