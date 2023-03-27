@@ -53,10 +53,10 @@ slider.addEventListener('scroll', function(){
     const currentSlide = checkAllSliderBCRLefts()
     const currentIlluminations = illuminateIconsAtIndeces[currentSlide]
     if (currentSlide === undefined) {
-        sliderIcons.forEach(icon => icon.classList.add('hidden'))
+        $(".icon-img").fadeOut(300)
     } else {
         currentIlluminations.forEach(index => {
-            sliderIcons[`${index}`].classList.remove('hidden')
+            $(`[index=${index}]`).fadeIn(300)
         })
     }
 })
