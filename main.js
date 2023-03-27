@@ -39,21 +39,24 @@ const checkSliderBCRLeft = (index, checkpoint) => {
     return (proximityBetweenElements > 0.9 && proximityBetweenElements < 1.1)
 }
 
-// const illuminateIconsAtIndeces = {
-//     0: [],
-//     1: [0, 1, 2, 4, 5],
-//     2: [],
-//     3: [],
-//     4: [],
-//     5: [],
-//     6: [],
-// }
+const illuminateIconsAtIndeces = {
+    0: [],
+    1: [0, 1, 2, 4, 5, 6, 7, 12, 13, 14],
+    2: [0, 1, 2, 3],
+    3: [0, 1, 2, 4, 5, 6, 7, 12, 13, 14],
+    4: [0, 1, 8, 9, 10, 12],
+    5: [0, 1, 2, 4, 5, 7, 11, 15],
+    6: [0, 1, 2, 15],
+}
 
 slider.addEventListener('scroll', function(){
     const currentSlide = checkAllSliderBCRLefts()
+    const currentIlluminations = illuminateIconsAtIndeces[currentSlide]
     if (currentSlide === undefined) {
         sliderIcons.forEach(icon => icon.classList.add('hidden'))
     } else {
-        sliderIcons[`${currentSlide}`].classList.add('hidden')
+        currentIlluminations.forEach(index => {
+            sliderIcons[`${index}`].classList.remove('hidden')
+        })
     }
 })
