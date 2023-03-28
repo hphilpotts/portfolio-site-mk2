@@ -61,7 +61,7 @@ a {
     flex: 1;
     overflow: auto;
     width: auto;
-    margin: 20% 5%;
+    margin: 20% 7.5%;
 }
 
 #landing-container {
@@ -81,11 +81,18 @@ a {
     max-width: 200px;
 }
 
+#projects-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
 .slider-icons {
     height: 20%;
     display: flex;
     flex-wrap: wrap;
     background-color: black;
+    width: 100%;
     max-width: 575px;
 }
 
@@ -108,6 +115,7 @@ a {
 
 .slider {
     height: 80%;
+    max-width: 100%;
     display: flex;
     align-items: stretch;
     overflow-x: auto;
