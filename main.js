@@ -23,8 +23,12 @@ aboutSpan.addEventListener('click', function () { scrollToTargetElement(aboutScr
 // Project Slider Behaviour
 
 const sliderIcons = Array.prototype.slice.call( document.getElementsByClassName('icon-img') )
-const sliderBCRLeft = document.getElementById('slider').getBoundingClientRect().left;
 const slides = Array.prototype.slice.call( document.getElementsByClassName('slide') )
+
+let sliderBCRLeft = 0
+const getSliderBCRLeft = () => sliderBCRLeft = document.getElementById('slider').getBoundingClientRect().left
+getSliderBCRLeft()
+window.onresize = getSliderBCRLeft
 
 const checkAllSliderBCRLefts = () => {
     for (let i = 0; i < 7; i++) {
@@ -40,7 +44,7 @@ const checkSliderBCRLeft = (index, checkpoint) => {
 }
 
 const illuminateIconsAtIndeces = {
-    0: [],
+    0: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
     1: [0, 1, 2, 4, 5, 6, 7, 12, 13, 14],
     2: [0, 1, 2, 3],
     3: [0, 1, 2, 4, 5, 6, 7, 12, 13, 14],
