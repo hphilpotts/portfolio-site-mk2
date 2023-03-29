@@ -62,6 +62,7 @@ a {
     overflow: auto;
     width: auto;
     margin: 20% 7.5%;
+    min-height: 70vh;
 }
 
 #landing-container {
@@ -133,9 +134,62 @@ a {
     width: 100%;
     margin: 0 25%;
     height: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+
     -webkit-overflow-scrolling: touch;
     scroll-snap-align: start;
     scroll-behavior: smooth;
+}
+
+.slide > div {
+    text-align: center;
+    font-size: smaller;
+}
+
+.slide-title, .slide-stack, .slide-links {
+    flex: 1;
+}
+
+.slide-body {
+    flex: 7;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide-body-content {
+    margin: 0 5%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;  
+    scroll-behavior: smooth;
+}
+
+.slide-body-content-item {
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+.slide-body-content-item-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.slide-body-btn {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .content-container-vertical {
@@ -192,4 +246,8 @@ a {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
 }
