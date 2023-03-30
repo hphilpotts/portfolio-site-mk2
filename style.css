@@ -151,6 +151,14 @@ a {
     font-size: smaller;
 }
 
+.skills-slide {
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
 .slide-title, .slide-stack, .slide-links {
     flex: 1;
 }
