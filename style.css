@@ -178,7 +178,7 @@ a {
     max-width: 400px;
     text-align: center;
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;  
     scroll-behavior: smooth;
