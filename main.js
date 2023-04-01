@@ -57,10 +57,10 @@ slider.addEventListener('scroll', function(){
     const currentSlide = checkAllSliderBCRLefts()
     const currentIlluminations = illuminateIconsAtIndeces[currentSlide]
     if (currentSlide === undefined) {
-        $(".icon-img").fadeOut(300)
+        $(".icon-img").fadeOut(250)
     } else {
         currentIlluminations.forEach(index => {
-            $(`[index=${index}]`).fadeIn(300)
+            $(`[index=${index}]`).fadeIn(250)
         })
     }
 })

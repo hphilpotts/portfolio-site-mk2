@@ -165,7 +165,7 @@ a {
 
 .slide-body {
     flex: 7;
-
+    max-height: 70%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
