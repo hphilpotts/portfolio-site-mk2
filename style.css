@@ -78,7 +78,7 @@ a {
 }
 
 #profile-img {
-    margin: 20% 20% 0% 20%;
+    margin: 10% 10% 0% 10%;
     height: auto;
     border-radius: 5%;
     border: 0.2rem solid white;
@@ -115,7 +115,7 @@ a {
     background: transparent;
     border-radius: 0.5em;
     background: radial-gradient(white, black 100%);
-}  
+}
 
 .slider {
     height: 80%;
@@ -123,12 +123,13 @@ a {
     display: flex;
     align-items: stretch;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;  
+    scroll-snap-type: x mandatory;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-.slider::-webkit-scrollbar, .slide-body-content::-webkit-scrollbar { 
+.slider::-webkit-scrollbar,
+.slide-body-content::-webkit-scrollbar {
     display: none;
 }
 
@@ -146,7 +147,7 @@ a {
     scroll-behavior: smooth;
 }
 
-.slide > div {
+.slide>div {
     text-align: center;
     font-size: smaller;
 }
@@ -159,7 +160,9 @@ a {
     justify-content: space-evenly;
 }
 
-.slide-title, .slide-stack, .slide-links {
+.slide-title,
+.slide-stack,
+.slide-links {
     flex: 1;
 }
 
@@ -180,7 +183,7 @@ a {
     display: flex;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;  
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -247,20 +250,59 @@ a {
     .content-container {
         margin: 5% 20%;
     }
+
+    .hello-text{
+        font-size: large;
+    }
+
+    #hello-line {
+        margin-top: 5%;
+        font-size: larger;
+    }
+}
+
+@media (min-height: 800px) {
+    .content-container {
+        margin: 30% 7.5%;
+    }
+}
+
+@media (min-height: 1100px) {
+    .content-container {
+        margin: 10% 20%;
+    }
+
+    .left-align {
+        text-align: left;
+    }
+
+    .right-align {
+        text-align: right;
+    }
+
+    .hello-text {
+        font-size: larger;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #hello-line {
+        font-size: x-large;
+    }
 }
 
 /* credit: https://codepen.io/nxworld/pen/OyRrGy */
-#down-arrow { 
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-top: 20%;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  box-sizing: border-box;
+#down-arrow {
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-top: 20%;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
 }
 
 .hidden {
