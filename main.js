@@ -57,10 +57,28 @@ slider.addEventListener('scroll', function(){
     const currentSlide = checkAllSliderBCRLefts()
     const currentIlluminations = illuminateIconsAtIndeces[currentSlide]
     if (currentSlide === undefined) {
-        $(".icon-img").fadeOut(250)
+        $(".icon-img").fadeOut(175)
     } else {
         currentIlluminations.forEach(index => {
             $(`[index=${index}]`).fadeIn(250)
         })
     }
+})
+
+// This is to get the current slide body link to change when it is clicked
+const getCurrentURL = () => {
+    console.log(window.location.href);
+}
+
+const switcheroo = parent => {
+    const numButtons = $(parent).children().toArray()
+    console.log(numButtons);
+}
+
+const slideBodyButtonPanels = $(".slide-body-btn").toArray()
+
+slideBodyButtonPanels.forEach(item => {
+    item.addEventListener('click', function(){
+        switcheroo(item)
+    })
 })

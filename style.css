@@ -291,6 +291,12 @@ a {
     }
 }
 
+@media (max-width: 500px) {
+    .content-container {
+        margin-bottom: 30%;
+    }
+}
+
 /* credit: https://codepen.io/nxworld/pen/OyRrGy */
 #down-arrow {
     top: 0;
@@ -303,6 +309,11 @@ a {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     box-sizing: border-box;
+}
+
+.highlighted {
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgb(0, 166, 255);
 }
 
 .hidden {
