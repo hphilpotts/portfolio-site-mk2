@@ -18,14 +18,14 @@ a {
 
 #navbar,
 #footer,
-#navbar2 {
+#navbar-mobile {
     height: 10vh;
     width: 100%;
     overflow: hidden;
     position: fixed;
 }
 
-#navbar, #navbar2 {
+#navbar, #navbar-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +45,7 @@ a {
     margin: 0 5%;
 }
 
-#navbar2 {
+#navbar-mobile {
     display: none;
 }
 
@@ -331,7 +331,7 @@ a {
     #navbar, #footer {
         display: none;
     }
-    #navbar2 {
+    #navbar-mobile {
         display: flex;
         height: 5vh;
         font-size: x-small;

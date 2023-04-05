@@ -22,8 +22,8 @@ aboutSpan.addEventListener('click', function () { scrollToTargetElement(aboutScr
 
 // Project Slider Behaviour
 
-const sliderIcons = Array.prototype.slice.call( document.getElementsByClassName('icon-img') )
-const slides = Array.prototype.slice.call( document.getElementsByClassName('slide') )
+const sliderIcons = Array.prototype.slice.call(document.getElementsByClassName('icon-img'))
+const slides = Array.prototype.slice.call(document.getElementsByClassName('slide'))
 
 let sliderBCRLeft = 0
 const getSliderBCRLeft = () => sliderBCRLeft = document.getElementById('slider').getBoundingClientRect().left
@@ -53,7 +53,7 @@ const illuminateIconsAtIndeces = {
     6: [0, 1, 2, 15],
 }
 
-slider.addEventListener('scroll', function(){
+slider.addEventListener('scroll', function () {
     const currentSlide = checkAllSliderBCRLefts()
     const currentIlluminations = illuminateIconsAtIndeces[currentSlide]
     if (currentSlide === undefined) {
@@ -65,22 +65,19 @@ slider.addEventListener('scroll', function(){
     }
 })
 
-// This is to get the current slide body link to change when it is clicked
-const getCurrentURL = () => {
-    console.log(window.location.href);
+const slide3Buttons = $('#slide-3-btn').children().toArray()
+const slide3Slides = $('#slide-3-body').children().toArray()
+
+const showTargetedSlide = targetSlide => {
+    slide3Slides.forEach(slide => {
+        $(slide).hide()
+    })
+    $(targetSlide).show()
 }
 
-const switcheroo = parent => {
-    const numButtons = $(parent).children().toArray()
-    console.log(numButtons);
-}
-
-const slideBodyButtonPanels = $(".slide-body-btn").toArray()
-
-slideBodyButtonPanels.forEach(item => {
-    item.addEventListener('click', function(){
-        switcheroo(item)
+slide3Buttons.forEach(button => {
+    const targetSlide = '#item' + button.id.slice(-4)
+    button.addEventListener('click', function () {
+        showTargetedSlide(targetSlide)
     })
 })
-
-window.onresize(console.log($(window).height()))
