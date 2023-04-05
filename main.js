@@ -82,3 +82,5 @@ slideBodyButtonPanels.forEach(item => {
         switcheroo(item)
     })
 })
+
+window.onresize(console.log($(window).height()))
