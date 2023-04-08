@@ -70,14 +70,18 @@ const slide3Slides = $('#slide-3-body').children().toArray()
 
 const showTargetedSlide = targetSlide => {
     slide3Slides.forEach(slide => {
-        $(slide).hide()
+        $(slide).fadeOut(200)
     })
-    $(targetSlide).show()
+    $(targetSlide).fadeIn(400)
 }
 
 slide3Buttons.forEach(button => {
     const targetSlide = '#item' + button.id.slice(-4)
     button.addEventListener('click', function () {
         showTargetedSlide(targetSlide)
+        slide3Buttons.forEach(eachButton => {
+            $(eachButton).removeClass('bold-highlighted')
+        })
+        $(button).addClass('bold-highlighted')
     })
 })
