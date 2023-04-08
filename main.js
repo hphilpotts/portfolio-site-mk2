@@ -65,23 +65,33 @@ slider.addEventListener('scroll', function () {
     }
 })
 
-const slide3Buttons = $('#slide-3-btn').children().toArray()
-const slide3Slides = $('#slide-3-body').children().toArray()
+const slideBody = {};
 
-const showTargetedSlide = targetSlide => {
-    slide3Slides.forEach(slide => {
+for (let i = 0; i < 7; i++) {
+    slideBody[`${i}`] = {
+        buttons: $('#slide-' + i + '-btn').children().toArray(),
+        slides: $('#slide-' + i + '-body').children().toArray()
+    }
+}
+
+const showTargetedSlide = (targetSlide, slideArray) => {
+    slideArray.forEach(slide => {
         $(slide).fadeOut(200)
     })
     $(targetSlide).fadeIn(400)
 }
 
-slide3Buttons.forEach(button => {
-    const targetSlide = '#item' + button.id.slice(-4)
-    button.addEventListener('click', function () {
-        showTargetedSlide(targetSlide)
-        slide3Buttons.forEach(eachButton => {
-            $(eachButton).removeClass('bold-highlighted')
+for (let prop in slideBody) {
+    const slideButtons = slideBody[prop].buttons
+    const slideSlides = slideBody[prop].slides
+    slideButtons.forEach(button => {
+        const targetSlide = '#item' + button.id.slice(-4)
+        button.addEventListener('click', function () {
+            showTargetedSlide(targetSlide, slideSlides)
+            slideButtons.forEach(eachButton => {
+                $(eachButton).removeClass('bold-highlighted')
+            })
+            $(button).addClass('bold-highlighted')
         })
-        $(button).addClass('bold-highlighted')
     })
-})
+}
