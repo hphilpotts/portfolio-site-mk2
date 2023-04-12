@@ -480,7 +480,7 @@
         </div>
 
         <div class="full-page-screen" id="about-screen">
-            <div class="content-container content-container-vertical">
+            <div class="content-container content-container-vertical" id="about-menu">
                 <div class="quarter-div flex-centered">
                     <div class="inner">
                         <h1>About:</h1>
@@ -488,7 +488,7 @@
                 </div>
                 <div class="quarter-div flex-centered">
                     <div class="inner">
-                        <h2 class="highlighted">Coding Journey</h2>
+                        <h2 class="highlighted" id="journey-btn" target="#about-journey">Coding Journey</h2>
                     </div>
                 </div>
                 <div class="quarter-div flex-centered">
@@ -500,6 +500,11 @@
                     <div class="inner">
                         <h2 class="highlighted">Downtime</h2>
                     </div>
+                </div>
+            </div>
+            <div class="content-container content-container-vertical hidden" id="about-journey">
+                <div class="close" id="journey-close" target="#about-journey">
+                    x
                 </div>
             </div>
         </div>

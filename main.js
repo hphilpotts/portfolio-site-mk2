@@ -101,3 +101,22 @@ const showTargetedSlide = (targetSlide, slideArray) => {
     })
     $(targetSlide).fadeIn(400)
 }
+
+// About show/hide:
+const aboutMenu = $('#about-menu')
+const aboutJourneyBtn = $('#journey-btn')
+const closeJourney = $('#journey-close')
+
+const toggleAboutEle = btn => {
+    const targetElement = $(btn[0].getAttribute('target'))
+    aboutMenu.toggle()
+    targetElement.toggle()
+}
+
+aboutJourneyBtn.on("click", function () {
+    toggleAboutEle(aboutJourneyBtn)
+})
+
+closeJourney.on("click", function() {
+    toggleAboutEle(aboutJourneyBtn)
+})

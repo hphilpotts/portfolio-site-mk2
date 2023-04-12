@@ -25,7 +25,8 @@ a {
     position: fixed;
 }
 
-#navbar, #navbar-mobile {
+#navbar,
+#navbar-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,8 +296,10 @@ a {
         font-size: x-large;
     }
 }
+
 /* credit: https://codepen.io/nxworld/pen/OyRrGy */
-#down-arrow, #right-arrow {
+#down-arrow,
+#right-arrow {
     top: 0;
     left: 50%;
     width: 24px;
@@ -317,6 +320,15 @@ a {
     top: -25%;
 }
 
+.close {
+    float: right;
+    height: 5%;
+    width: 5%;
+    padding: 5%;
+    font-size: xx-large;
+    font-weight: 50;
+}
+
 #mobile-links {
     display: none;
 }
@@ -325,22 +337,28 @@ a {
     .main-container {
         max-height: 80vh;
     }
+
     .content-container {
         margin: 20% 2.5% 25% 2.5%;
         font-size: x-small;
     }
+
     .icon {
         max-width: 10%;
         padding: 1%;
     }
-    #navbar, #footer {
+
+    #navbar,
+    #footer {
         display: none;
     }
+
     #navbar-mobile {
         display: flex;
         height: 5vh;
         font-size: x-small;
-    } 
+    }
+
     #mobile-links {
         display: block;
     }
