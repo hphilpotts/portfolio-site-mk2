@@ -256,13 +256,13 @@ a {
         margin: 5% 20%;
     }
 
-    .hello-text{
-        font-size: large;
-    }
+    /* .hello-text{
+        font-size: larger;
+    } */
 
     #hello-line {
         margin-top: 5%;
-        font-size: larger;
+        /* font-size: larger; */
     }
 }
 
@@ -296,7 +296,7 @@ a {
     }
 }
 /* credit: https://codepen.io/nxworld/pen/OyRrGy */
-#down-arrow {
+#down-arrow, #right-arrow {
     top: 0;
     left: 50%;
     width: 24px;
@@ -307,6 +307,14 @@ a {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     box-sizing: border-box;
+}
+
+#right-arrow {
+    position: relative;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    left: 45%;
+    top: -25%;
 }
 
 #mobile-links {
