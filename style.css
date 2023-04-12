@@ -23,6 +23,7 @@ a {
     width: 100%;
     overflow: hidden;
     position: fixed;
+    background-color: rgba(0, 0, 0, 0.501);
 }
 
 #navbar,
@@ -333,6 +334,10 @@ a {
     margin-top: 10%;
 }
 
+.show-mobile {
+    display: none;
+}
+
 #mobile-links {
     display: none;
 }
@@ -364,6 +369,9 @@ a {
     }
 
     #mobile-links {
+        display: block;
+    }
+    .show-mobile {
         display: block;
     }
     .about-content {
