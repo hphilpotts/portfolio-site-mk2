@@ -104,19 +104,14 @@ const showTargetedSlide = (targetSlide, slideArray) => {
 
 // About show/hide:
 const aboutMenu = $('#about-menu')
-const aboutJourneyBtn = $('#journey-btn')
-const closeJourney = $('#journey-close')
+const aboutButtons = $('.about-button')
 
-const toggleAboutEle = btn => {
-    const targetElement = $(btn[0].getAttribute('target'))
+const toggleAboutDiv = buttonClicked => {
+    const targetElement = $(buttonClicked[0].getAttribute('target'))
     aboutMenu.toggle()
     targetElement.toggle()
 }
 
-aboutJourneyBtn.on("click", function () {
-    toggleAboutEle(aboutJourneyBtn)
-})
-
-closeJourney.on("click", function() {
-    toggleAboutEle(aboutJourneyBtn)
+aboutButtons.on("click", function() {
+    toggleAboutDiv($(this))
 })
