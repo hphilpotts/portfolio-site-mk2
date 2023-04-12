@@ -324,9 +324,13 @@ a {
     float: right;
     height: 5%;
     width: 5%;
-    padding: 5%;
+    padding: 2.5%;
     font-size: xx-large;
     font-weight: 50;
+}
+
+.about-content {
+    margin-top: 10%;
 }
 
 #mobile-links {
@@ -361,6 +365,10 @@ a {
 
     #mobile-links {
         display: block;
+    }
+    .about-content {
+        margin-top: 15%;
+        margin-bottom: -15%;
     }
 }
 
