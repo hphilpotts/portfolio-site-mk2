@@ -12,6 +12,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 .slide-links a {
     font-size: smaller;
 }
@@ -371,9 +375,11 @@ a {
     #mobile-links {
         display: block;
     }
+
     .show-mobile {
         display: block;
     }
+
     .about-content {
         margin-top: 15%;
         margin-bottom: -15%;
