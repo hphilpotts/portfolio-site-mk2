@@ -40,6 +40,7 @@ a:hover {
 .navbar-link {
     margin: 0 5%;
 }
+
 .navbar-link:hover {
     cursor: pointer;
 }
@@ -226,7 +227,7 @@ a:hover {
 
 .slide-body-btn:hover {
     cursor: pointer;
-} 
+}
 
 .content-container-vertical {
     display: flex;
@@ -413,4 +414,21 @@ a:hover {
 
 .hidden {
     display: none;
+}
+
+/* wave text animation - credit: https://codepen.io/alvarotrigo/pen/xxLvyOG */
+.wave span {
+    position: relative;
+    display: inline-block;
+    animation: wave 2.5s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes wave {
+    0%, 40%, 100% {
+        transform: translateY(0)
+    }
+    20% {
+        transform: translateY(-1.5px)
+    }
 }
