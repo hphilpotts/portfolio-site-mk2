@@ -308,6 +308,9 @@ a:hover {
     #hello-line {
         font-size: x-large;
     }
+    .slide-body-btn {
+        font-size: x-large;
+    }
 }
 
 /* credit: https://codepen.io/nxworld/pen/OyRrGy */

@@ -6,7 +6,7 @@ class LinkGroup {
     constructor(link) {
         this.links = [document.getElementById(link + '-link'), document.getElementById(link + '-link-mobile'), document.getElementById(link + '-span')]
         this.targetScreen = document.getElementById(link + '-screen')
-
+        this.roundedTargetTop = Math.floor(this.targetScreen.getBoundingClientRect().top / 100)
         const target = this.targetScreen
         const filteredLinks = this.links.filter(Boolean)
         filteredLinks.forEach(link => link.addEventListener('click', function () { scrollToTargetElement(target) }))
@@ -19,6 +19,49 @@ const helloLinks = new LinkGroup('hello')
 
 const downArrow = document.getElementById('down-arrow')
 downArrow.addEventListener('click', function () { scrollToTargetElement(helloLinks.targetScreen) })
+
+
+// throttler for scroll events
+
+const throttledScrollEvent = (func, delay) => {
+    let time = Date.now()
+
+    return () => {
+        if ((time + delay - Date.now()) <= 0) {
+            func()
+            time = Date.now()
+        }
+    }
+}
+
+
+// Update nav link highlights
+const mainContainer = document.getElementById('main-container')
+
+const checkCurrentScrollPosition = () => {
+    const currentScrollPointTop = Math.floor(mainContainer.scrollTop / 100)
+
+    switch (currentScrollPointTop) {
+        case helloLinks.roundedTargetTop:
+            $(helloLinks.links.filter(Boolean)).addClass('highlighted')
+            break;
+        case projectsLinks.roundedTargetTop:
+            $(projectsLinks.links).addClass('highlighted')
+            break;
+        case aboutLinks.roundedTargetTop:
+            $(aboutLinks.links).addClass('highlighted')
+            break;
+        default:
+            $(helloLinks.links.filter(Boolean)).removeClass('highlighted')
+            $(projectsLinks.links).removeClass('highlighted')
+            $(aboutLinks.links).removeClass('highlighted')
+
+    }
+    
+}
+
+mainContainer.addEventListener('scroll', throttledScrollEvent(checkCurrentScrollPosition, 200))
+
 
 // Project Slider Behaviour
 
