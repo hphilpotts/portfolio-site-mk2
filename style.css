@@ -40,6 +40,9 @@ a:hover {
 .navbar-link {
     margin: 0 5%;
 }
+.navbar-link:hover {
+    cursor: pointer;
+}
 
 #footer {
     bottom: 0;
@@ -221,6 +224,10 @@ a:hover {
     justify-content: space-around;
 }
 
+.slide-body-btn:hover {
+    cursor: pointer;
+} 
+
 .content-container-vertical {
     display: flex;
     flex-flow: column wrap;
@@ -317,6 +324,11 @@ a:hover {
     box-sizing: border-box;
 }
 
+#down-arrow:hover,
+#right-arrow:hover {
+    cursor: pointer;
+}
+
 #right-arrow {
     position: relative;
     -webkit-transform: rotate(-135deg);
@@ -332,6 +344,10 @@ a:hover {
     padding: 2.5%;
     font-size: xx-large;
     font-weight: 50;
+}
+
+.about-button:hover {
+    cursor: pointer;
 }
 
 .about-content {
